@@ -7,16 +7,16 @@ kramdown:
 
 # 作者信息
 author: 
-  name: 闫肃
+  name: 松林    
   email: suyan0830@gmail.com
-  link: http://yansu.org
+  link: http://uxlsl.org
   weibo: http://weibo.com/yansu0711
-  github: http://github.com/suyan
+  github: http://github.com/uxlsl
 
 # 站点信息
-title: 闫肃的博客 
-description: 闫肃的博客
-url: http://yansu.org
+title: 松林的博客 
+description: 松林的博客
+url: http://uxlsl.org
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
