@@ -1,0 +1,4 @@
+#+TITLE: org-to-md 的方式
+
+* 方式一:
+  使用org-md-export-to-markdown 函数,export 相同的文件.
