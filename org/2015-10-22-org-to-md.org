@@ -1,0 +1,5 @@
+#+TITLE: emacs org-to-md 的方式
+
+* 方式:
+  1. 使用org-md-export-to-markdown ,这样export出来文件只是后缀不同.
+  2. 修改后,使用 org-md-export-as-markdown export 到缓冲区，然后复制相关内容到 md文件上.
