@@ -5,7 +5,18 @@ category: 学习
 keywords: 阅读,2015
 ---
 
-# 方式
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 方式:</a></li>
+</ul>
+</div>
+</div>
+
+
+
+# 方式 :<a id="sec-1" name="sec-1"></a>
 
     1.  使用org-md-export-to-markdown ,这样export出来文件只是后缀不同.
     2.  修改后,使用 org-md-export-as-markdown, 然后复制相关内容到 md文件上.
