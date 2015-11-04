@@ -12,13 +12,14 @@ pythonic 有点像，idiomatic Python
 > Pythonic means code that doesn't just get the syntax right but that follows the conventions of the Python community and uses the language in the way it is intended to be used.[what-does-pythonic-mean](http://stackoverflow.com/questions/25011078/what-does-pythonic-mean)
 
 
-#　如何看待pythonic
+# 如何看待pythonic
 
 > Moreover, when a veteran Python developer (a Pythonista) points to portions of code and says they are not “Pythonic”,
 > it usually means that these lines of code do not follow the common guidelines
 > and fail to express the intent in what is considered the best (hear: most readable) way.
 
 可以看出成功pythonic 的条件有
+
 + 按照公共的指南
 + 高可读性
 
