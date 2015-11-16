@@ -71,4 +71,4 @@ removeAttr(val);
 
 
 # 参考
-[1:锋利的jquery
+[1]:锋利的jquery
