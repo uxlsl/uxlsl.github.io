@@ -32,6 +32,10 @@ jquery.form.js使用步骤
 [marketo](http://jqueryvalidation.org/files/demo/marketo/)
 [jquery.form实例](http://jquery.malsup.com/form/#ajaxForm)
 
+
+## TODO
+1. 参考api写清楚一些
+
 ## 自己写的例子
 
 ```
