@@ -68,3 +68,7 @@ removeAttr(val);
 5. parent()
 6. parents()
 7. closest()
+
+
+# 参考
+[1:锋利的jquery
