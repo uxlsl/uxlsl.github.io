@@ -9,6 +9,31 @@ keywords: 学习,2015
 
 ![jquery插件](http://7xnnj6.com1.z0.glb.clouddn.com/jquery_form_validation.png)
 
+
+**说明**
+
+使用jquery.validate.js来检验表格输入是否符合要求,
+使用jquery.form.js来实现ajax表格.
+
+**总结**
+jquery.validate.js使用步骤
+1. 引入jquery.validate.js
+2. 对表格要检验的表使用 $("XXX").validate(),XXX为选择表达式.
+3. 对于校难的使用 class装饰.
+
+jquery.form.js使用步骤
+1. 引入jquery.form.js
+2. 写options
+3. 调用ajaxform方法
+
+## 参考
+
+[官网](http://jqueryvalidation.org)
+[marketo](http://jqueryvalidation.org/files/demo/marketo/)
+[jquery.form实例](http://jquery.malsup.com/form/#ajaxForm)
+
+## 例子
+
 ```
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
