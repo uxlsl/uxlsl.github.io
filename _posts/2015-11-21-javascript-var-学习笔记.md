@@ -16,7 +16,7 @@ keywords: 学习,2015
 
 
 *对象* 引用
-[对象引用](http://7xnnj6.com1.z0.glb.clouddn.com/javascript-var.jpg)
+![对象引用](http://7xnnj6.com1.z0.glb.clouddn.com/javascript-var.jpg)
 
 这就好像A,B喜欢C,然后A喜欢D,但不能改变B喜欢C.
 
