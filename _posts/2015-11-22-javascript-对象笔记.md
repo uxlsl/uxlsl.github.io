@@ -28,6 +28,7 @@ var persion = {"name":"bar",
 ### 设置可写性,也许在严格模式中有效.
 
 
+
 ```
 
 Object.defineProperty(persion, "help",{
