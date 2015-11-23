@@ -62,13 +62,14 @@ removeAttr(val);
 
 # 遍历节点
 1. children() 用于匹配元素的子元素的集合,只考虑子元索不考虑其他元素.
-!()[http://7xnnj6.com1.z0.glb.clouddn.com/jquery-children.jpg]
 2. next()
 3. pre()
 4. siblings()
 5. parent()
 6. parents()
 7. closest()
+
+![](http://7xnnj6.com1.z0.glb.clouddn.com/jquery-children.jpg)
 
 
 # 参考
