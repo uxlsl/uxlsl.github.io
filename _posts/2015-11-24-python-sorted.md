@@ -57,3 +57,6 @@ itemgetter('name','age')(data[0]) -> ['foo', 2]
 [{'age': 54, 'job': 'watermelon', 'name': 'bar'},
  {'age': 23, 'job': 'banana', 'name': 'foo'},
  {'age': 35, 'job': 'apple', 'name': 'xx'}]
+
+*注意*
+要明确看出结果的区别,则要数据要改进.
