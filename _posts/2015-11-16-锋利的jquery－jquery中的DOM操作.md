@@ -70,7 +70,7 @@ removeAttr(val);
 7. closest()
 
 ![](http://7xnnj6.com1.z0.glb.clouddn.com/jquery-children.jpg)
-
+![](http://7xnnj6.com1.z0.glb.clouddn.com/jquery-node.jpg)
 
 # 参考
 [1]:锋利的jquery
