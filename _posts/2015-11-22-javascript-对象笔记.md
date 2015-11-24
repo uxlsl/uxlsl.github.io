@@ -60,6 +60,7 @@ function Persion(name, age, job){
 
 ### 原型模式
 
+
 ```
 
 function Persion(){
@@ -70,6 +71,23 @@ Persion.prototype.age = 100;
 Persion.prototype.job = "7lg";
 
 ```
+
+### 稳妥构造方法
+
+```
+
+function Persion(name, age, job){
+    var o = new Object();
+    o.sayName = function(){
+       alert(name + age + job);
+       };
+   return o
+}
+
+```
+
+就是设置了私有变量一样,其他地方访问不到 name, age , job.
+
 
 
 ## TODO
