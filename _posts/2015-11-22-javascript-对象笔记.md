@@ -47,6 +47,10 @@ Object.defineProperty(XX, name, {get:XX,set:XX})
 ```
 
 ## 构造函数形式
+基本
++ 工厂方式, 通过Object对象,添加方法
++ 构造函数方式, 通过this对象.
+
 
 ```
 
