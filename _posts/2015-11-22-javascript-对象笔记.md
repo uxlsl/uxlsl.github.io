@@ -70,7 +70,37 @@ Persion.prototype.name ="lsl";
 Persion.prototype.age = 100;
 Persion.prototype.job = "7lg";
 
+
+//2
+
+function Persion(){}
+
+Persion.prototype = {"name": "lsl",
+                     "age": 100,
+                     "job" : "7lg"
+                     "constructor": Persion, //重要
+}
+
+
 ```
+
+### 组合方式
+
+```
+
+function Persion(name, age, job){
+  this.name = name;
+  this.age = age;
+  this.job = job;
+  };
+
+Persion.prototype.sayName = function(){
+    alert(this.name);
+}
+
+
+```
+就是要原来构造方法上再添加一些方法
 
 ### 稳妥构造方法
 
