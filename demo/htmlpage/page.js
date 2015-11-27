@@ -1,29 +1,3 @@
----
-layout: post
-title: html表格翻页功能实现
-category: 学习
-keywords: 学习,2015
----
-
-# html表格翻页功能实现,在客户端实现,与服务器无关
-
-问题:在不改变服务器形式上实现翻页功能, 增加上一页,下一页等等.
-如:
-![](http://7xnnj6.com1.z0.glb.clouddn.com/page.png)
-结构如下:
-![](http://7xnnj6.com1.z0.glb.clouddn.com/page_html.png)
-
-
-## 一些关健点
-1. 将当前的点击对象转换成 jquery对象, $(this) or $(current)
-2. 在原有jquery对象查找下级对象为$(xx).find()
-3. 在原有jquery对象查找上级对象$(xx).parent(),$(xx).parents(), $(xx).closest()
-4. 在jquery对象旁边对象, 左$(xx).prev(),右$(xx).next()
-
-## javascript 实现
-
-```
-
 var PAGE_SIZE = 3;
 function page_show(items, page, page_count, page_current_num, page_info, next_btn, prev_btn){
   console.log("page_show");
@@ -92,6 +66,3 @@ $(document).ready(function(){
       page_go(this, -1, true);
     });
 });
-
-
-```
