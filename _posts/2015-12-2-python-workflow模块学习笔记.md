@@ -18,10 +18,19 @@ baz
 ]
 执行就是foo,bar,baz
 
+## 技巧通过eng实现跳转
+eng.stopProcessing  # stops the current workflow
+eng.haltProcessing  # halts the workflow (can be used for nested wf engines)
+eng.continueNextToken  # can be called many levels deep, jumps up to next token
+eng.jumpTokenForward  # will skip the next object and continue with the next one
+eng.jumpTokenBack  # will return back, start processing again
+eng.jumpCallForward  # in one loop [call, call...] jumps x steps forward
+eng.jumpCallBack  # in one loop [call, call...] jumps x steps forward
+eng.breakFromThisLoop  # break from this loop, but do not stop processing
+
 
 
 ```
-
 
 import time
 from workflow.engine import GenericWorkflowEngine
@@ -61,3 +70,7 @@ wfe.process(["a"])
 ```
 
 ## 总结 纯实现流程比这种好一点,也许使用这个目的就是应付下老板,说我使用新技术了.
+
+## 参考
+
+[workflow官方文档](http://workflow.readthedocs.org/en/latest/)
