@@ -43,6 +43,7 @@ patch 装饰器能够给指定作用城内给对象打补丁,并且过了作用�
 # 练习
 
 ----demo/code/2015-12-11/mocktest.py----
+
 ```
 
 # -*- coding:utf-8 -*-
@@ -104,3 +105,7 @@ with patch.dict(foo, {'newkey': 'newvalue'}):
      assert foo == {'newkey': 'newvalue'}
 
 ```
+
+
+# 参考
+[unittest](https://docs.python.org/3/library/unittest.mock.html?highlight=mock#module-unittest.mock)
