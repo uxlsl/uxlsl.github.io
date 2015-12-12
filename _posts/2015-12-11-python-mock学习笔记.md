@@ -17,6 +17,7 @@ unittest.mock 是python测试的一个库,它能让你在测试是代替系统�
 
 答
 1. MagicMock
+
 > Mock and MagicMock objects create all attributes and methods as you access them and store details of how they have been used. You can configure them, to specify return values or limit what attributes are available, and then make assertions about how they have been used:
 
 mock 和magicMock对象 能够任何属性和方法,并且能够记录它们是怎样使用的,你也能够配置它们返回指定属性.
@@ -24,6 +25,7 @@ mock 和magicMock对象 能够任何属性和方法,并且能够记录它们是�
 
 
 2. mock.patch
+
 > The patch decorators are used for patching objects only within the scope of the function they decorate. They automatically handle the unpatching for you, even if exceptions are raised. All of these functions can also be used in with statements or as class decorators.
 
 patch 装饰器能够给指定作用城内给对象打补丁,并且过了作用城自动解除, 使用可以是with,or,类装饰.
