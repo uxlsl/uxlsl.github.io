@@ -26,20 +26,22 @@ keywords: 学习,2015
 
 scope > module, session ,function
 
-+ module 指在每一次模块中执行一次
-+ session 指在会话中执行一次
-+ function 指在每个函数中执行一次
+    + module 指在每一次模块中执行一次
+    + session 指在会话中执行一次
+    + function 指在每个函数中执行一次
 
 params > 类型列表,每一个是一次参数.
 
 
 2. 装饰后的fixture函数的request参数
 request
-+ params   显而易见是参数
-+ addfinalizer 结束时执行
+
+    + params   显而易见是参数
+    + addfinalizer 结束时执行
 
 3. @pytest.mark.usefixtures(fixturename)
 标注class使用什么fixture
+
 
 ```
 
@@ -57,20 +59,24 @@ class TestDirectoryInit:
     def test_cwd_again_starts_empty(self):
         assert os.listdir(os.getcwd()) == []
 
-
 ```
 
 4. 配置文件
 
 ```
+
 # content of pytest.ini
 [pytest]
-usefixtures = cleandir
+usefixtures = cleandir # 每个模块都会执行一次!
+
 
 ```
 
+# fixture 的一个库factory_boy
 
+> As a fixtures replacement tool, it aims to replace static, hard to maintain fixtures with easy-to-use factories for complex object.
 
+目标是代替静态,难于维护的fixture,从而对于复杂的对象容易使用.
 
 # 测试代码目录
 
