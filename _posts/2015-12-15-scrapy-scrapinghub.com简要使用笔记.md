@@ -16,10 +16,10 @@ keywords: 学习,2015
 3. 安装 shub ,使用pip install shub
 4. 使用shub login, 填入apikey
 5. 进入scrpy项目文件,配置scrapy.cfg
-如:
+6. 部署 使用命令. shub deploy
 
 
-```
+``` scrapy.cfg配置示例
 
 [deploy]
 username = d267ffd3aaefe48b694fe231bf70fb400
@@ -28,7 +28,6 @@ project = 29986
 
 ```
 
-6. 部署 使用命令. shub deploy
 
 
 
