@@ -18,8 +18,10 @@ keywords: 学习,2015
 5. 进入scrpy项目文件,配置scrapy.cfg
 6. 部署 使用命令. shub deploy
 
+scrapy.cfg配置示例
 
-``` scrapy.cfg配置示例
+
+``` 
 
 [deploy]
 username = d267ffd3aaefe48b694fe231bf70fb400
