@@ -1,0 +1,14 @@
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/pbr.json
+project.egg-info/top_level.txt
+wochacha/__init__.py
+wochacha/items.py
+wochacha/pipelines.py
+wochacha/settings.py
+wochacha/spiders/__init__.py
+wochacha/spiders/items.py
+wochacha/spiders/medicine.py
