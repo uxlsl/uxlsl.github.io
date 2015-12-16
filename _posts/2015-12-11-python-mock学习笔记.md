@@ -44,6 +44,9 @@ patch 装饰器能够给指定作用城内给对象打补丁,并且过了作用�
 4. 适合改变一些字典,比如 os.environ
 
 
+*注意*
+mock patck模块级, 如果一个函数使用了from hello import method 的话,是mock不到的
+
 # 练习
 
 ----demo/code/2015-12-11/mocktest.py----
