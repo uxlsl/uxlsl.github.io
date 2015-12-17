@@ -3,5 +3,7 @@ _drafts/
 .DS_Store
 .idea/
 *.pyc
-__pycache__/
 .cache/
+.git/
+__pycache__/
+.ropeproject/
