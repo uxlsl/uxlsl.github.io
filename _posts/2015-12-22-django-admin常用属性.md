@@ -28,9 +28,7 @@ admin.site.register
 
 demo/code/2015-12-22/myadmin
 
-
 ``` admin.py
-
 
 from django.contrib import admin
 from .models import SuperHero
@@ -41,11 +39,9 @@ class SuperHeroAdmin(admin.ModelAdmin):
     ordering = ["name"]
     list_filter = ("name", "added_on")
     actions = ['foo_and_bar']
-
     def foo_and_bar(self, request, queryset):
         queryset.update(name="foo_and_bar")
 
 admin.site.register(SuperHero, SuperHeroAdmin)
-
 
 ```
