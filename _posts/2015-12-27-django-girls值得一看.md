@@ -71,5 +71,4 @@ def post_new(request):
 ```
 
 # 参考
-
-(djangogirls入门教程中文版)[http://tutorial.djangogirls.org/zh/django/index.html]
+[djangogirls入门教程中文版](http://tutorial.djangogirls.org/zh/django/index.html)
