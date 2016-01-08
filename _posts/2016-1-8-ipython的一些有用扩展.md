@@ -62,7 +62,7 @@ c.InteractiveShellApp.exec_files = [
 
 # 参考
 [autoreload](http://ipython.readthedocs.org/en/stable/config/extensions/autoreload.html)
-[store][http://ipython.readthedocs.org/en/stable/config/extensions/storemagic.html]
+[store](http://ipython.readthedocs.org/en/stable/config/extensions/storemagic.html)
 
 # 自我检查
 时间 2016-1-9,写下使用感受
