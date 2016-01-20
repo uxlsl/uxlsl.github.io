@@ -1,0 +1,34 @@
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
+
+<ul>
+<li>
+{% timezone None %}
+    Server time: {{ value }}
+{% endtimezone %}
+</li>
+<li>
+localtime: {{ value|localtime }}
+</li>
+{% for tz in timezones %}
+<li>
+  {{ tz }}
+  {% timezone tz %}
+  {{ tz }}: {{ value }}
+  {% endtimezone %}
+</li>
+{% endfor %}
+</ul>
+
+
+
+<form action="{% url 'set_timezone' %}" method="POST">
+    {% csrf_token %}
+    <label for="timezone">Time zone:</label>
+    <select name="timezone">
+        {% for tz in timezones %}
+        <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected="selected"{% endif %}>{{ tz }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Set" />
+</form>
