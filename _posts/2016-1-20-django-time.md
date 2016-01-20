@@ -128,6 +128,10 @@ class TimezoneMiddleware(object):
 ./demo/code/2016-1-20/mytimezone 显示所有时区的时间
 
 
+# 额外
+*如果想要在代码中使用本地时间有如下方法*:
+1.
+now.astimezone(pytz.timezone(settings.TIME_ZONE))))
 
 # 参考
 
