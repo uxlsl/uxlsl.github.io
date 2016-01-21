@@ -19,6 +19,7 @@ keywords: 学习,2016
 **强烈要求安装pytz*
 
 ```
+
 pip install pytz
 
 ```
@@ -27,7 +28,6 @@ pip install pytz
 
 
 ```
-
 
 import datetime
 
@@ -65,6 +65,7 @@ You should set the current time zone to the end user’s actual time zone with a
 
 ```
 
+
 import pytz
 
 from django.utils import timezone
@@ -83,6 +84,7 @@ class TimezoneMiddleware(object):
 # 模块时间的一些应用
 
 总体来说就是打开与关闭
+
 
 ```
 
@@ -119,9 +121,12 @@ class TimezoneMiddleware(object):
 
 ```
 
+
 {{ value|date:"Y-m-d H:i" }} # 常用
 
-``
+
+```
+
 
 # 例子
 
