@@ -86,47 +86,6 @@ class TimezoneMiddleware(object):
 总体来说就是打开与关闭
 
 
-```
-
-\{% load tz %}
-
-\{% localtime on %}
-    {{ value }}
-\{% endlocaltime %}
-
-\{% localtime off %}
-    {{ value }}
-\{% endlocaltime %}
-
-# 1
-\{% timezone "Europe/Paris" %}
-    Paris time: {{ value }}
-\{% endtimezone %}
-
-\{% timezone None %}
-    Server time: {{ value }}
-\{% endtimezone %}
-
-# 2
-
-\{{ value|timezone:"Europe/Paris" }}
-
-
-```
-
-
-## 时间格式
-
-
-```
-
-
-{{ value|date:"Y-m-d H:i" }} # 常用
-
-
-```
-
-
 # 例子
 
 ./demo/code/2016-1-20/mytimezone 显示所有时区的时间
