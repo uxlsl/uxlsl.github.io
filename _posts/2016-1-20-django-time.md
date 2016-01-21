@@ -90,6 +90,8 @@ class TimezoneMiddleware(object):
 
 ./demo/code/2016-1-20/mytimezone 显示所有时区的时间
 
+![](http://7xnnj6.com1.z0.glb.clouddn.com/timezone-example.png)
+
 
 # 额外
 *如果想要在代码中使用本地时间有如下方法*:
