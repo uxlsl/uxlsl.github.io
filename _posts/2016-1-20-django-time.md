@@ -93,7 +93,12 @@ class TimezoneMiddleware(object):
 
 # 额外
 *如果想要在代码中使用本地时间有如下方法*:
+
 1.
+from django.templatetags.tz import localtime
+localtime(now)
+
+2.
 now.astimezone(pytz.timezone(settings.TIME_ZONE))))
 
 # 参考
