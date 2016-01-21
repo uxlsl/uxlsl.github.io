@@ -89,7 +89,7 @@ class TimezoneMiddleware(object):
 ```
 
 
-{% load tz %}
+{% loadx tz %}  # 报错 把loadx 改为 load
 
 {% localtime on %}
     {{ value }}
