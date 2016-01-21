@@ -88,29 +88,28 @@ class TimezoneMiddleware(object):
 
 ```
 
+\{% load tz %}
 
-{% loadx tz %}  # 报错 把loadx 改为 load
-
-{% localtime on %}
+\{% localtime on %}
     {{ value }}
-{% endlocaltime %}
+\{% endlocaltime %}
 
- {% localtime off %}
+\{% localtime off %}
     {{ value }}
-{% endlocaltime %}
+\{% endlocaltime %}
 
 # 1
-{% timezone "Europe/Paris" %}
+\{% timezone "Europe/Paris" %}
     Paris time: {{ value }}
-{% endtimezone %}
+\{% endtimezone %}
 
-{% timezone None %}
+\{% timezone None %}
     Server time: {{ value }}
-{% endtimezone %}
+\{% endtimezone %}
 
 # 2
 
-{{ value|timezone:"Europe/Paris" }}
+\{{ value|timezone:"Europe/Paris" }}
 
 
 ```
