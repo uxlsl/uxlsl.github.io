@@ -29,7 +29,6 @@ class AddressAdmin(admin.ModelAdmin):
     search_fields = ("city",)
     ordering = ("city",)
     list_filter = ("city", "added_on")
-    filter_horizontal = ('suprehero',)
 
 
 admin.site.register(Address, AddressAdmin)
