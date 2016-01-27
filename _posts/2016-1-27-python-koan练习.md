@@ -167,11 +167,10 @@ Out[15]: [0, 1, 'a', 'b', 'c', 3, 4, 5, 6, 7, 8, 9]
 
 ```
 
-# range 负步长情况
+## range 负步长情况
+
 range(5, 3, -1)
 
-
-```
 
 # 列表的赋值 (AboutListASSignments)
 
@@ -184,8 +183,52 @@ range(5, 3, -1)
 *总结*
 列表一次性贼值给多个变量
 
+
 ```
 
 first_name, last_name = last_name, first_name
+
+```
+
+
+# 关于字典(about_dictionaries)
+
+test_creating_dictionaries
+test_dictionary_literals
+test_accessing_dictionaries
+test_changing_dictionaries
+test_dictionary_is_unordered
+test_dictionary_keys_and_values
+test_making_a_dictionary_from_a_sequence_of_keys
+
+
+总结:
+
+1. 字典的创造
+2. 字典的访问
+3. 字典的修改
+4. 字典的无序性
+5. 字典的key和values
+6. 字典的fromkeys
+
+技巧
+使用fromkeys向多个健赋相同的值
+
+
+```
+
+In [29]:        cards = {}.fromkeys(('red warrior', 'green elf', 'blue valkyrie',
+                             'yellow dwarf', 'confused looking zebra'), 42)
+
+   ....:
+In [30]:
+In [30]: cards
+Out[30]:
+{'blue valkyrie': 42,
+ 'confused looking zebra': 42,
+ 'green elf': 42,
+ 'red warrior': 42,
+ 'yellow dwarf': 42}
+
 
 ```
