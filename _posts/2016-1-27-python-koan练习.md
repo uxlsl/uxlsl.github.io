@@ -251,18 +251,19 @@ test_strings_can_change_case
 3. 字符串的联合
 
 
-``` 令人兴奋的部分
+```
 
->>> import math  # import a standard python module with math functions
+In [9]: decimal_places = 4
 
->>> decimal_places = 4
->>> "The square root of 5 is {0:.{1}f}".format(math.sqrt(5),
-decimal_places)
-'The square root of 5 is 2.2361'
->>> import datetime
->>> d = datetime.datetime(2010, 7, 4, 12, 15, 58)
->>> '{:%Y-%m-%d %H:%M:%S}'.format(d)
-'2010-07-04 12:15:58'
+In [10]: "The square root of 5 is {0:.{1}f}".format(math.sqrt(5),
+   ....: decimal_places)
+Out[10]: 'The square root of 5 is 2.2361'
+
+In [11]: import datetime
+
+In [12]: d = datetime.datetime(2010, 7, 4, 12, 15, 58)
+
+In [13]: '{:%Y-%m-%d %H:%M:%S}'.format(d)
 
 
 ```
