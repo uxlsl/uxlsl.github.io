@@ -111,3 +111,48 @@ assertRegexpMatches
 
 总结:
 第3点经常会出现,注意AttributeError,会提高解决问题效率.
+
+
+# 关于列表(about_list)
+
+  test_accessing_list_elements
+  test_creating_lists
+  test_insertions has
+  test_list_literals
+  test_lists_and_ranges
+  test_making_queues
+  test_popping_lists
+  test_ranges_with_steps
+  test_slicing_lists
+  test_slicing_to_the_edge
+
+
+*有趣的句子*
+part of the python philosophy is that there ideally should be one
+only one way of doing anything
+这也许就是有pop 没有 push的原因吧!
+
+总结:
+1. 创造列表
+2. 列表区间赋值
+3. 列表的访问
+4. 列表的切片
+5. 列表插入
+6. append与pop
+7. range
+
+
+```
+
+In [12]: a = range(10)
+
+In [13]: a
+Out[13]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [14]: a[2:3] = ['a','b','c']
+
+In [15]: a
+Out[15]: [0, 1, 'a', 'b', 'c', 3, 4, 5, 6, 7, 8, 9]
+
+
+```
