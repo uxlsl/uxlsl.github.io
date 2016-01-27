@@ -35,7 +35,7 @@ moment and reflect upon the test to see what it is teaching you and improve the 
 **重构测试然后想想学到了什么,并且尝试怎样修改从而接近原意!**
 
 
-# emacs 技巧
+## emacs 技巧
 
 1. M + %
 2. C + W
@@ -45,7 +45,7 @@ editing
 
 goto 2
 
-# 关于字符串(about_string.py)
+## 关于字符串(about_string.py)
 
   test_adjacent_strings_are_concatenated_automatically
   test_double_quoted_strings_are_strings
@@ -66,7 +66,7 @@ goto 2
   test_use_double_quotes_to_create_strings_with_single_quotes
   test_use_single_quotes_to_create_string_with_double_quotes
 
-## 总结
+### 总结
 
 + 字符串的表达方式
     1. "str"
@@ -90,7 +90,7 @@ goto 2
 + 字符串比较
 不同形式比较是相等的
 
-### 技巧
+#### 技巧
 1. 如果字符串中有',尽量使用",
 2. 如果字符串中有",尽量使用',
 3. 如果多行使用"""|'''
@@ -103,7 +103,7 @@ Out[8]: True
 
 ```
 
-# 关于None
+## 关于None
 
 1. test_none_is_an_object
 2. test_none_is_universal
@@ -121,7 +121,7 @@ assertRegexpMatches
 第3点经常会出现,注意AttributeError,会提高解决问题效率.
 
 
-# 关于列表(about_list)
+## 关于列表(about_list)
 
   test_accessing_list_elements
   test_creating_lists
@@ -140,7 +140,7 @@ part of the python philosophy is that there ideally should be one
 only one way of doing anything
 这也许就是有pop 没有 push的原因吧!
 
-总结:
+### 总结:
 1. 创造列表
 2. 列表区间赋值
 3. 列表的访问, 正,负访问
@@ -165,12 +165,12 @@ Out[15]: [0, 1, 'a', 'b', 'c', 3, 4, 5, 6, 7, 8, 9]
 
 ```
 
-## range 负步长情况
+### range 负步长情况
 
 range(5, 3, -1)
 
 
-# 列表的赋值 (AboutListASSignments)
+## 列表的赋值 (AboutListASSignments)
 
   test_non_parallel_assignment
   test_parallel_assignments
@@ -190,7 +190,7 @@ first_name, last_name = last_name, first_name
 ```
 
 
-# 关于字典(about_dictionaries)
+## 关于字典(about_dictionaries)
 
 test_creating_dictionaries
 test_dictionary_literals
@@ -201,7 +201,7 @@ test_dictionary_keys_and_values
 test_making_a_dictionary_from_a_sequence_of_keys
 
 
-总结:
+### 总结:
 
 1. 字典的创造
 2. 字典的访问
@@ -231,7 +231,7 @@ Out[30]:
 ```
 
 
-# 字符串操作(AboutStringManipulation)
+## 字符串操作(AboutStringManipulation)
 
 test_use_format_to_interpolate_variables
 test_formatted_values_can_be_show_in_any_order_or_be_repeated
@@ -245,7 +245,7 @@ test_raw_strings_do_not_interpret_escape_characters
 test_strings_can_be_joined
 test_strings_can_change_case
 
-## 总结
+### 总结
 1. 字符串的格式化
 2. 字符串的分割
 3. 字符串的联合
@@ -271,7 +271,7 @@ In [13]: '{:%Y-%m-%d %H:%M:%S}'.format(d)
 *If the implementation is easy to explain, it may be a good idea.*
 
 
-# 元组(AboutTuples)
+## 元组(AboutTuples)
 test_creating_a_tuple
 test_tuples_are_imutable_so_item_assignment_is_not_possible
 test_tuples_are_imutable_so_appending_is_not_possible
@@ -282,7 +282,7 @@ test_creating_empty_tuples
 test_tuples_can_be_embedded
 test_tuples_are_good_for_representing_records
 
-## 总结
+### 总结
 
 1. 元组的创建
 2. 元组的*不可变性*
