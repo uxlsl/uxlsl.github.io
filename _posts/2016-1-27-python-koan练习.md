@@ -268,5 +268,45 @@ In [13]: '{:%Y-%m-%d %H:%M:%S}'.format(d)
 
 ```
 
+*If the implementation is easy to explain, it may be a good idea.*
+
+
+# 元组(AboutTuples)
+test_creating_a_tuple
+test_tuples_are_imutable_so_item_assignment_is_not_possible
+test_tuples_are_imutable_so_appending_is_not_possible
+test_tuples_can_only_be_changed_through_replacement
+test_tuples_of_one_look_peculiar
+test_tuple_constructor_can_be_surprising
+test_creating_empty_tuples
+test_tuples_can_be_embedded
+test_tuples_are_good_for_representing_records
+
+## 总结
+
+1. 元组的创建
+2. 元组的*不可变性*
+3. *一个元素的元组*, 容易出错
+4. 空的元组
+5. 元组的嵌套
+6. 元组的更改
+
+
+```
+
+('one') == 'one'# True
+('one', ) # 一个元素的元组写法
+tuple() # 推荐空元组的写法
+
+#一个元素的表达可能和下面有关
+
+("hello"
+ "world"
+)
+
+```
+
+
+
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
