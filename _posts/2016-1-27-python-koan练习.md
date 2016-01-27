@@ -35,28 +35,36 @@ moment and reflect upon the test to see what it is teaching you and improve the 
 **重构测试然后想想学到了什么,并且尝试怎样修改从而接近原意!**
 
 
+# emacs 技巧
 
+1. M + %
+2. C + W
+editing
+3. C + M + c
+4. n
+
+goto 2
 
 # 关于字符串(about_string.py)
 
-  test_adjacent_strings_are_concatenated_automatically has expanded your awareness.
-  test_double_quoted_strings_are_strings has expanded your awareness.
-  test_escaping_quotes_at_the_end_of_triple_quoted_string has expanded your awareness.
-  test_most_strings_interpret_escape_characters has expanded your awareness.
-  test_plus_concatenates_strings has expanded your awareness.
-  test_plus_equals_also_leaves_original_string_unmodified has expanded your awareness.
-  test_plus_equals_will_append_to_end_of_string has expanded your awareness.
-  test_plus_will_not_modify_original_strings has expanded your awareness.
-  test_raw_strings_are_also_strings has expanded your awareness.
-  test_single_quoted_strings_are_also_strings has expanded your awareness.
-  test_triple_quote_strings_are_also_strings has expanded your awareness.
-  test_triple_quoted_strings_can_span_lines has expanded your awareness.
-  test_triple_quoted_strings_need_less_escaping has expanded your awareness.
-  test_triple_single_quotes_work_too has expanded your awareness.
-  test_use_backslash_at_the_end_of_a_line_to_continue_onto_the_next_line has expanded your awareness.
-  test_use_backslash_for_escaping_quotes_in_strings has expanded your awareness.
-  test_use_double_quotes_to_create_strings_with_single_quotes has expanded your awareness.
-  test_use_single_quotes_to_create_string_with_double_quotes has expanded your awareness.
+  test_adjacent_strings_are_concatenated_automatically
+  test_double_quoted_strings_are_strings
+  test_escaping_quotes_at_the_end_of_triple_quoted_string
+  test_most_strings_interpret_escape_characters
+  test_plus_concatenates_strings
+  test_plus_equals_also_leaves_original_string_unmodified
+  test_plus_equals_will_append_to_end_of_string
+  test_plus_will_not_modify_original_strings
+  test_raw_strings_are_also_strings
+  test_single_quoted_strings_are_also_strings
+  test_triple_quote_strings_are_also_strings
+  test_triple_quoted_strings_can_span_lines
+  test_triple_quoted_strings_need_less_escaping
+  test_triple_single_quotes_work_too
+  test_use_backslash_at_the_end_of_a_line_to_continue_onto_the_next_line
+  test_use_backslash_for_escaping_quotes_in_strings
+  test_use_double_quotes_to_create_strings_with_single_quotes
+  test_use_single_quotes_to_create_string_with_double_quotes
 
 ## 总结
 
@@ -162,5 +170,22 @@ Out[15]: [0, 1, 'a', 'b', 'c', 3, 4, 5, 6, 7, 8, 9]
 # range 负步长情况
 range(5, 3, -1)
 
+
+```
+
+# 列表的赋值 (AboutListASSignments)
+
+  test_non_parallel_assignment
+  test_parallel_assignments
+  test_parallel_assignments_with_extra_values
+  test_parallel_assignments_with_sublists
+  test_swapping_with_parallel_assignment
+
+*总结*
+列表一次性贼值给多个变量
+
+```
+
+first_name, last_name = last_name, first_name
 
 ```
