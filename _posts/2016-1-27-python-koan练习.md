@@ -165,8 +165,6 @@ Out[15]: [0, 1, 'a', 'b', 'c', 3, 4, 5, 6, 7, 8, 9]
 
 ```
 
-```
-
 ## range 负步长情况
 
 range(5, 3, -1)
@@ -187,6 +185,7 @@ range(5, 3, -1)
 ```
 
 first_name, last_name = last_name, first_name
+
 
 ```
 
