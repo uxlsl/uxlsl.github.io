@@ -217,10 +217,8 @@ test_making_a_dictionary_from_a_sequence_of_keys
 
 ```
 
-In [29]:        cards = {}.fromkeys(('red warrior', 'green elf', 'blue valkyrie',
+In [29]: cards = {}.fromkeys(('red warrior', 'green elf', 'blue valkyrie',
                              'yellow dwarf', 'confused looking zebra'), 42)
-
-   ....:
 In [30]:
 In [30]: cards
 Out[30]:
@@ -229,6 +227,5 @@ Out[30]:
  'green elf': 42,
  'red warrior': 42,
  'yellow dwarf': 42}
-
 
 ```
