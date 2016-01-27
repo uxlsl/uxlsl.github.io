@@ -227,4 +227,45 @@ Out[30]:
  'red warrior': 42,
  'yellow dwarf': 42}
 
+
 ```
+
+
+# 字符串操作(AboutStringManipulation)
+
+test_use_format_to_interpolate_variables
+test_formatted_values_can_be_show_in_any_order_or_be_repeated
+test_any_python_expression_my_by_interpolated
+test_you_can_get_substring_from_a_string
+test_you_can_get_a_single_character_from_a_string
+test_single_characters_can_be_represented_be_integers
+test_strings_can_be_split
+test_strings_can_be_split_with_different_patterns
+test_raw_strings_do_not_interpret_escape_characters
+test_strings_can_be_joined
+test_strings_can_change_case
+
+## 总结
+1. 字符串的格式化
+2. 字符串的分割
+3. 字符串的联合
+
+
+``` 令人兴奋的部分
+
+>>> import math  # import a standard python module with math functions
+
+>>> decimal_places = 4
+>>> "The square root of 5 is {0:.{1}f}".format(math.sqrt(5),
+decimal_places)
+'The square root of 5 is 2.2361'
+>>> import datetime
+>>> d = datetime.datetime(2010, 7, 4, 12, 15, 58)
+>>> '{:%Y-%m-%d %H:%M:%S}'.format(d)
+'2010-07-04 12:15:58'
+
+
+```
+
+### 参考
+python-3.4.3-docs-html/library/string.html#formatspec
