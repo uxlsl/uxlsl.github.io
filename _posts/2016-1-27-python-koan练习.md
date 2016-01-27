@@ -94,3 +94,20 @@ Out[8]: True
 
 
 ```
+
+# 关于None
+
+1. test_none_is_an_object
+2. test_none_is_universal
+3. test_what_exception_do_you_get_when_call_nonexistent_methods
+4. test_none_is_distinct
+
+1. none 是一个对象
+2. none 是唯一
+3. 会异常
+4. none 不是 0 ,不是False
+
+assertRegexpMatches
+
+总结:
+第3点经常会出现,注意AttributeError,会提高解决问题效率.
