@@ -1,6 +1,6 @@
 ---
 layout: post
-title: python-koan 练习
+title: python-koan 传心练习
 category: 学习
 keywords: 学习,2016
 ---
