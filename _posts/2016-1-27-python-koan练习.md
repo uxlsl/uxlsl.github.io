@@ -379,6 +379,20 @@ man().hello()
 吃惊, 双下划线的还是可以访问的.
 
 
+## 关于控制语句(AboutControlStatements)
+
++ test_if_then_else_statements
++ test_if_then_statements
++ test_if_then_elif_else_statements
++ test_while_statement
++ test_break_statement
++ test_continue_statement
++ test_for_statement
++ test_for_statement_with_tuples
+
+总结:
+主要讲了if ,elif,else,while,break,continue,for, for with tuple的使用!
+
 
 
 
