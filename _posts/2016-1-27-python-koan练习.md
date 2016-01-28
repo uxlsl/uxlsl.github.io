@@ -480,6 +480,31 @@ test_illegal_triangles_throw_exceptions has expanded your awareness
 主要讲了异常的使用
 
 
+## 关于iteration(about_iteration)
+
+python 2 到python 3
+把列表差不多都高成了迭代子形式
+map ,filter,range,
+
+1. test_iterators_are_a_type
+2. test_iterating_with_next
+3. test_map_transforrms_elements_of_a_list
+4. test_just_return_first_item_found
+5. test_reduce_will_blow_you_mind
+6. test_use_pass_for_iterations_with_no_body
+7. test_all_iteration_methods_work_on_any_sequence_not_joust_lists
+
+### 总结
++ iter使用(1,2点),异常(StopIteration)
++ iter 转map,
++ reduce -> functools.reduce
++ iter for 结束后 i的值.
+
+
+
+
+
+
 
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
