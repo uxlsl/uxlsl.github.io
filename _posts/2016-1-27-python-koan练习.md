@@ -307,6 +307,83 @@ tuple() # 推荐空元组的写法
 ```
 
 
+## 方法(aboutMethods)
+
++ test_calling_a_global_function
+  如何看是全局函数?
+  定义时,def左边已经没空格了
++ test_callings_functions_with_wrong_number_of_arguments
+ 会出现
+    1. missing reqired positional arguments
+    2. takes   positional arguments but
+
++ test_which_does_not_return_anything
+没有返回值会出现什么情况?
+
++ test_calling_with_default_values
+默认值的情况
+
++ test_calling_with_variable_arguments
+args 会是什么类型呢?
+
++ test_functions_without_self_arg_are_global_functions
++ test_calling_methods_in_same_class_with_explicit_receiver
+
+
+测试没有self.的函数是什么函数,这个最令我吃惊的是打印了hi
+
+
+
+```
+def hello():
+    print ("hello")
+
+
+class man(object):
+    def hello(self):
+        def hello():
+            print ("hi")
+        hello()
+
+man().hello()
+
+
+```
+
++ test_that_old_methods_are_hidden_by_redefinitions
++ test_that_overlapped_method_is_still_there
+
+    def another_method_with_the_same_name(self):
+        return 10
+
+    link_to_overlapped_method = another_method_with_the_same_name
+
+方法赋值法,使相同功能的函数在一起
+
++ test_methods_that_do_nothing_need_to_use_pass_as_a_filler
++ test_pass_does_nothing_at_all
+
+
+测试发现还是会执行的
+
++ test_the_documentation_can_be_viewed_with_the_doc_method
+
+方法的__doc__文档
+
+
++ test_calling_methods_in_other_objects
++ test_private_access_is_implied_but_not_enforced
++ test_attributes_with_double_underscore_prefiex_are_subject_to_name_mangling
+
+测试私有方法的 _, __,
+吃惊, 双下划线的还是可以访问的.
+
+
+
+
+
+
+
 
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
