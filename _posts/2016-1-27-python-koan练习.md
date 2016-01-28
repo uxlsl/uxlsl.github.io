@@ -6,7 +6,7 @@ keywords: 学习,2016
 ---
 
 ##  Python Koans - Learn Python through TDD
-
+![](http://7xnnj6.com1.z0.glb.clouddn.com/koan.jpg)
 
 ## 安装使用
 
