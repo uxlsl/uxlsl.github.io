@@ -583,5 +583,52 @@ gen.next()
 *注意*
 lambda 不用使用返回值!
 
+
+*Namespaces are one honking great idea -- let's do more of those!*
+
+
+# dice game(AboutScoringProject)
+
+游戏规则
+
+1. 3个1就是1000点,其他3个就是3 * X
+2. 1 值就是100点(不属于3个以内)
+3. 5 值就是50点(不属于3个以内)
+
+例子
+
+# Examples:
+#
+# score([1,1,1,5,1]) => 1150 points
+# score([2,3,4,6,2]) => 0 points
+# score([3,4,5,3,3]) => 350 points
+# score([1,5,1,2,4]) => 250 points
+
+解法
+```
+
+def score(dice):
+    # You need to write this method
+    total = 0
+    one_total = dice.count(1)
+    if one_total >= 3:
+        total += 1000
+        one_total -= 3
+    total += one_total * 100
+
+    for i in range(2, 7):
+        if dice.count(i) >= 3:
+            total += 100 * i
+    if dice.count(5) > 3:
+        total += (dice.count(5) - 3) * 50
+    elif dice.count(5) < 3:
+        total += dice.count(5) * 50
+
+    return total
+
+
+```
+
+
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
