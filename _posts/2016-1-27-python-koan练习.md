@@ -587,7 +587,7 @@ lambda 不用使用返回值!
 *Namespaces are one honking great idea -- let's do more of those!*
 
 
-# dice game(AboutScoringProject)
+## dice game(AboutScoringProject)
 
 游戏规则
 
@@ -630,6 +630,76 @@ def score(dice):
 
 ```
 
+## 关于类(aboutClasses)
 
-### 参考
+1. test_instances_of_classes_can_be_created_adding_parentheses
+2. test_classes_have_docstrings
+### 总结
+fido.__class__.__name__
+fido.__doc__
+
+3. test_init_method_is_the_constructor
+4. test_private_attributes_are_not_really_private
+5. test_you_can_also_access_the_value_out_using_getattr_and_dict
+
+### 总结
++ 类的初始化
++ 类的属性
++ 类的访问
+
+6. test_that_name_can_be_read_as_a_property
+
++ 类的属性 可以使用
+
+```
+
+    class Dog3:
+
+        def __init__(self):
+            self._name = None
+
+        def set_name(self, a_name):
+            self._name = a_name
+
+        def get_name(self):
+            return self._name
+
+        name = property(get_name, set_name)
+
+```
+
+7. test_creating_properties_with_decorators_is_slightly_easier
+
++ 属性令一种写法
+
+```
+
+   class Dog4:
+
+        def __init__(self):
+            self._name = None
+
+        @property
+        def name(self):
+            return self._name
+
+        @name.setter
+        def name(self, a_name):
+            self._name = a_name
+
+
+```
+
+8. test_inside_a_method_self_refers_to_the_containing_object
+9. test_str_prpvides_a_string_version_of_the_object
+10. test_all_objects_support_str_and_repr
+
+
+### 总结
+str 给终端用户看,repr 则是给开发者看
+一切对象都有str和repr
+
+
+
+## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
