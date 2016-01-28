@@ -414,6 +414,31 @@ man().hello()
 
 
 
+**Namespaces are one honking great idea -- let's do more of those!**
+
+
+## 关于集合(AboutSets)
+
+test_sets_make_keep_lists_unique
+通过列表初始化成集合会去重
+test_empty_sets_have_different_syntax_to_populated_sets
+集合的不同表示
+test_dictionaries_and_sets_use_same_curly_braces
+注意集合与字典都使用了括号
+test_set_have_arithmetic_operators
+集合的不同操作 &^|
+test_we_canquery_set_membership
+test_we_can_compare_subsets
+集合的比较
+
+### 总结
+
+1. 集合初始化
+2. 集合与字典的共同点
+3. 集合的操作
+
+
+
 
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
