@@ -605,6 +605,7 @@ lambda 不用使用返回值!
 # score([1,5,1,2,4]) => 250 points
 
 解法
+
 ```
 
 def score(dice):
