@@ -470,6 +470,13 @@ RumtimeError -> Exception -> BaseException -> object
 
 
 
+## 关于三角形(aboutTriangleProject2)
+
+test_illegal_triangles_throw_exceptions has expanded your awareness
+
+## 总结
+主要讲了异常的使用
+
 
 
 ### 参考
