@@ -449,7 +449,24 @@ test_scalene_triangles_have_no_equal_sides
 a == b | b == c | a == c 表达式是不对的
 
 
+*Flat is better than nested.*
 
+## 关于异常(about_exceptions)
+
+test_exceptions_inherit_from_exception
+异常的继承
+test_try_clause
+test_raising_a_specific_error
+test_else_clause
+test_finally_clause
+
+
+### 总结
+主要讲了异常的继承,异常的抛出,else, finally
+finally 无论如何都执行, try else则是没有异常就执行.
+
+记:
+RumtimeError -> Exception -> BaseException -> object
 
 
 
