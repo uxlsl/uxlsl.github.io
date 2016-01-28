@@ -394,7 +394,23 @@ man().hello()
 主要讲了if ,elif,else,while,break,continue,for, for with tuple的使用!
 
 
+**Now is better than never.**
 
+## 关于控制语句的条件(about_true_and_false)
+
++ test_true_is_treated_as_true
++ test_false_is_treated_as_false
++ test_none_is_treated_as_false
++ test_zero_is_treated_as_false
++ test_empty_collections_are_treated_as_false
++ test_blank_strings_are_treated_as_false
++ test_everything_else_is_treated_as_true
+
+总结:
+条件的True,False,直接看作,True,False
+其他的就有条件了
+任何为空的都可以看作False,如None,[],{},(),空字符串,set()
+其他的就看作True
 
 
 
