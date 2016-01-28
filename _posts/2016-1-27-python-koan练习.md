@@ -469,6 +469,8 @@ finally 无论如何都执行, try else则是没有异常就执行.
 RumtimeError -> Exception -> BaseException -> object
 
 
+Flat is better than nested(扁平胜于嵌套)
+
 
 ## 关于三角形(aboutTriangleProject2)
 
