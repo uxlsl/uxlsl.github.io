@@ -439,6 +439,21 @@ test_we_can_compare_subsets
 
 
 
+## AboutTriangle
+
+test_equiateral_triangles_have_equal_sides
+test_isosceles_triangles_have_exactly_two_sides_equal
+test_scalene_triangles_have_no_equal_sides
+
+惊人地发现
+a == b | b == c | a == c 表达式是不对的
+
+
+
+
+
+
+
 
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
