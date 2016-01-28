@@ -524,6 +524,49 @@ map ,filter,range,
 构造式主要包括,list,dict,tuple,dictionary
 
 
+## 生成器(about_generators)
+
+1. test_generating_values_on_the_fly
+2. test_generators_are_different_to_list_comprehensions
+3. test_generator_expressions_are_a_one_shot_deal
+4. simple_generator_method
+5. test_generator_method_will_yield_values_during_iteration
+6. test_coroutines_can_take_arguments
+7. test_generator_keeps_track_of_local_variables
+8. test_generators_can_take_coroutines
+9. test_generators_can_see_if_they_have_been_called_with_a_values
+10. test_send_none_is_equivalent_to_next
+
+
+### 总结
+生成器与构造器的区别,生成器法则是用时再生,构造器是法则是全部一次性生成.
+以括号表示,生成器有一个关健字,yield,yield是保侍当前环境并返回一个值,再次入时就是之前环境.
+难点理解
+yield ,next 和 send
+
+一个协程的例子.
+
+```
+def yield_tester():
+    value = yield # 1 在此挂起,等待next | send
+    if value:
+        yield value
+    else:
+        yield 'no value'
+
+gen = yield_tester()
+gen.next()
+
+
+```
+
+
+
+### 应用是
+1. 协程如gevent应该用了好多这个, send
+
+
+
 
 
 ### 参考
