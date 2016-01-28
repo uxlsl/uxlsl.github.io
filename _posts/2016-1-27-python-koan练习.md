@@ -557,8 +557,10 @@ def yield_tester():
 gen = yield_tester()
 gen.next()
 
-
 ```
+
+*If the implementation is easy to explain, it may be a good idea.*
+
 
 
 
@@ -567,7 +569,19 @@ gen.next()
 
 
 
+## 关于lambda(aboutLambdas)
 
+1. test_accessing_lambda_via_assignment
+2. test_lambdas_can_be_assigned_to_variables_and_called_explicitly
+3. test_accessing_lambda_without_assignment
+
+### 总结
+
+1. lambda 函数能分配给变量!
+2. lambdas 函数能不用分配变量就可以调用!
+
+*注意*
+lambda 不用使用返回值!
 
 ### 参考
 python-3.4.3-docs-html/library/string.html#formatspec
