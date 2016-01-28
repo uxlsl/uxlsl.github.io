@@ -479,6 +479,8 @@ test_illegal_triangles_throw_exceptions has expanded your awareness
 ## 总结
 主要讲了异常的使用
 
+*Although practicality beats purity.*
+*实用大于完美*
 
 ## 关于iteration(about_iteration)
 
@@ -502,6 +504,24 @@ map ,filter,range,
 
 
 
+
+*In the face of ambiguity, refuse the temptation to guess.*
+*碰到模棱两可的地方, 绝对不要去作猜测*
+
+
+
+## 构造式(aboutComprehension)
+
+1. test_creating_lists_with_list_comprehensions
+2. test_filtering_lists_with_list_comprehensions
+3. test_unpacking_tuples_in_list_comprehensions
+4. test_double_list_comprehension
+5. test_creating_a_set_with_set_comprehension
+6. test_creating_a_dictionary_with_dictionary_comprehension
+
+### 总结
+构造式主要功能简化日常的操作,用几行代码实现多行代码的功能,
+构造式主要包括,list,dict,tuple,dictionary
 
 
 
