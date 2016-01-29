@@ -1206,5 +1206,42 @@ __module__ 是写绝对路径,这样信息量大一点!
 
 
 
+## 关于类的属性(about_class_attributes)
+
+
+
+
+```
+
+    class Dog2:
+
+        def wag(self):
+            return 'instance wag'
+
+        def bark(self):
+            return "instance bark"
+
+        def growl(self):
+            return "instance growl"
+
+        @staticmethod
+        def bark():
+            return "staticmethod bark, arg: None"
+
+        @classmethod
+        def growl(cls):
+            return "classmethod growl, arg: cls=" + cls.__name__
+
+```
+
++ test_classes_and_instances_do_not_share_instance_attributest
++ test_classes_and_instances_do_share_class_attributes
+
+
+总结:
+类和实体共享类的属性,但不共享实体的属性
+说明了实体的独立性!
+
+
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
