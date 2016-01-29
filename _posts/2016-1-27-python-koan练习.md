@@ -953,5 +953,93 @@ __self__, __func__, __get__, __set__
 装饰器作用是装饰,不能改变函数内部逻辑,也可以能,对参数进行修改!
 
 
+
+*Errors should never pass silently.*
+
+
+## 关于类装饰器(about_decorating_with_classes)
+
++ test_partial_that_wrappers_no_args
++ test_partial_that_wrappers_first_arg
++ test_partial_that_wrappers_al_args
+
+```
+
+max = functools.partial(max)
+max(7,23)
+max = functools.partial(max, 0)
+max(-1)
+max(99)
+max = functools.partial(max, 99, 20)
+max()
+
+
+```
+通过这个,能发现functools.partial重装定制函数的作用.
+
+
++ test_decorator_with_no_arguments
+
+```
+
+    class doubleit:
+
+        def __init__(self, fn):
+            self.fn = fn
+
+        def __call__(self, *args):
+            return self.fn(*args) + ', ' + self.fn(*args)
+
+        def __get__(self, obj, cls=None):
+            if not obj:
+                # Decorating an unbound function
+                return self
+            else:
+                # Decorating a bound method
+                return functools.partial(self, obj)
+
+    @doubleit
+    def foo(self):
+        return "foo"
+
+```
+
+总结: 显示类装饰器的用法!
+
+
+
+```
+
+    class documenter:
+
+        def __init__(self, *args):
+            self.fn_doc = args[0]
+
+        def __call__(self, fn):
+            def decorated_function(*args):
+                return fn(*args)
+
+            if fn.__doc__:
+                decorated_function.__doc__ = fn.__doc__ + ": " + self.fn_doc
+            else:
+                decorated_function.__doc__ = self.fn_doc
+            return decorated_function
+
+
+    @documenter("Does nothing")
+    def idler(self, num):
+        "Idler"
+        pass
+
+```
+
++ test_documentor_which_already_has_a_docstring
+
+
+总结:
+文档在装饰器的位置!
+
+
+
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
