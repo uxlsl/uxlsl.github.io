@@ -1273,9 +1273,49 @@ __module__ 是写绝对路径,这样信息量大一点!
  # trigger a __getattribute__() call.
 
 ```
+
 主要是讲了__getattribute__ 的使用,访问通过这个方法,getattr
 
 **getattribute** ->没有原属性? 是-> **getattr**
+
+
+## 关于删除对象(about_deleting_objects)
+
++ test_del_can_remove_slices
++ test_del_can_remove_entire_lists
+
+说明删除能删除部分列表,整个列表!
+
++ test_del_can_remove_attributest
+说明删除能删除类,实体的属性!
+
++ test_del_works_with_properties
+
+说明能删除类的properties属性!
+
+
++ test_del_can_be_overriden
+
+说明能删除继承过来的属性!
+
+
+```
+
+
+    class MoreOrganisedClosingSale(ClosingSale):
+
+        def __init__(self):
+            self.last_deletion = None
+            super().__init__()
+
+        def __delattr__(self, attr_name):
+            self.last_deletion = attr_name
+
+
+
+
+```
+
 
 
 
