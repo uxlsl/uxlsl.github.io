@@ -778,5 +778,39 @@ Context managers are a way of allocating and releasing some sort of resource exa
 [introduction-to-context-managers](http://eigenhombre.com/2013/04/20/introduction-to-context-managers/)
 
 
+
+*If the implementation is easy to explain, it may be a good idea.*
+*如果容易解释,这可能是一个好主意*
+
+
+## 关于猴子补丁(about_monkey_patching)
+
+> A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).
+
++ test_after_patching_dogs_can_both_wag_and_bark
++ test_most_built_in_classes_cannot_be_monkey_patched
++ test_subclasses_of_built_in_classes_can_be_be_monkey_patched
+
+### 总结
+可以添加方法到已经存在的类,但不可以添加到内建的方法.
+*运行中*
+
+
+```
+
+class Dog:
+    def bark(self):
+        return "WOOF"
+
+def wag(self):
+    return "HAPPY"
+
+Dog.wag = wag
+
+
+```
+
+
+
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
