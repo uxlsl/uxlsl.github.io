@@ -1040,6 +1040,40 @@ max()
 文档在装饰器的位置!
 
 
+## 关于类继承(about_inheritance)
+
++ test_subclasses_have_the_parent_as_an_ancestor
++ test_this_all_classes_in_python3_ultimately_inherit_from_object_class
++ test_instances_inherit_behavior_from_parent_class
++ test_subclasses_add_new_behavior
+
+
+issubclass使用,以及继承类的关系.
+继承类有被继承类的方法.
+
++ test_base_init_does_not_get_called_automatically
++ test_base_init_has_to_be_called_explicitly
+
+```
+
+    class Pug(Dog):
+
+        def __init__(self, name):
+            pass
+
+    class Greyhound(Dog):
+
+        def __init__(self, name):
+            super().__init__(name)
+
+```
+
+
+ 说明重载的类的方法要想被调用,就要主动调用!
+
+
+
+
 
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
