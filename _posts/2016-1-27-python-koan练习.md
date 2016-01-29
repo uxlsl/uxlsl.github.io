@@ -1404,7 +1404,8 @@ finditer() -->  Find all substrings where the RE matches, and returns them as an
 注意match,search返回是匹配对象,findall,返回是列表,finditer则返回iter
 
 
-
+![](https://camo.githubusercontent.com/92a0e6c8cfa3aae0e70f442fc915263ee59bf5bf/687474703a2f2f6d656469612e74756d626c722e636f6d2f74756d626c725f6c74757a6a766251364c31717a677078392e676966)
 
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
+[python_koans](https://github.com/gregmalcolm/python_koans)
