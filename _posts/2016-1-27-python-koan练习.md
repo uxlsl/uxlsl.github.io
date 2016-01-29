@@ -844,8 +844,83 @@ class DiceSet:
 
 *Beautiful is better than ugly.*
 
+*Readability counts.(可读性极具价值)*
 
 
+
+## 关于方法绑定(about_method_bindings)
+
+1. test_methods_are_bound_to_an_object
+2. test_methods_are_also_bound_to_a_function
+
+
+绑定用法
+
+```
+
+In [14]: class robot(object):
+    def __init__(self,tip='welcome'):
+        self.tip = tip
+    def hello(self,name):
+        print(self.tip,name)
+   ....:
+
+In [15]: r = robot()
+
+In [16]: r.hello('lsl')
+welcome lsl
+
+In [17]: hello = r.hello
+
+In [18]: hello('lsl')
+welcome lsl
+
+
+
+
+```
+
+1. test_setting_attributes_on_an_unbound_function
+2. test_setting_attributes_on_a_bound_method_directly
+
+说明:函数能设置属性.
+
+
+1. test_get_descriptor_resolves_attribute_binding
+2. test_set_descriptor_changes_behavior_or_attribute_assignment_changes
+
+
+
+```
+
+    class BoundClass:
+
+        def __get__(self, obj, cls):
+            return (self, obj, cls)
+
+
+
+    class SuperColor:
+
+        def __init__(self):
+            self.choice = None
+
+        def __set__(self, obj, val):
+            self.choice = val
+
+```
+
+说明:能通过修改set|get描述符改变类的默认行为.
+
+### 技巧
+1. 怎样判断方法是绑定,还是没绑定, hasattr(method, '__self__'), hasattr(method,'__func__')
+
+
+### 总结
+往函数中添加属性,这也许说明这就是唯一的.
+
+### 记忆
+__self__, __func__, __get__, __set__
 
 
 ## 参考
