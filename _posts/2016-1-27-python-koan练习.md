@@ -1390,6 +1390,21 @@ class Proxy:
 这个有难度,搞了好久!
 
 
+*Beautiful is better than ugly.*
+
+## 关于正则表达式(about_regex)
+
+match()    -->  Determine if the RE matches at the beginning of the string.
+search()   -->  Scan through a string, looking for any location where this RE matches.
+findall()  -->  Find all substrings where the RE matches, and returns them as a list.
+finditer() -->  Find all substrings where the RE matches, and returns them as an iterator.
+
++ haw many matches
+
+注意match,search返回是匹配对象,findall,返回是列表,finditer则返回iter
+
+
+
 
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
