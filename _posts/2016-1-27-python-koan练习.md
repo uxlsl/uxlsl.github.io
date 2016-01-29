@@ -785,6 +785,9 @@ Context managers are a way of allocating and releasing some sort of resource exa
 
 ## 关于猴子补丁(about_monkey_patching)
 
+![](http://7xnnj6.com1.z0.glb.clouddn.com/monkey.jpeg)
+
+
 > A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).
 
 + test_after_patching_dogs_can_both_wag_and_bark
@@ -809,6 +812,7 @@ Dog.wag = wag
 
 
 ```
+
 
 
 
