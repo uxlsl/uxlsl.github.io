@@ -815,6 +815,37 @@ Dog.wag = wag
 
 
 
+## 关于骰子游戏
+
+
+```
+
+class DiceSet:
+
+    def __init__(self):
+        self._values = None
+
+    @property
+    def values(self):
+        return self._values
+
+    def roll(self, n):
+        # Needs implementing!
+        # Tip: random.randint(min, max) can be used to generate random numbers
+        values = []
+        for i in range(n):
+            values.append(random.randint(1, 6))
+
+        self._values = values
+
+
+```
+
+
+
+
+
+
 
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
