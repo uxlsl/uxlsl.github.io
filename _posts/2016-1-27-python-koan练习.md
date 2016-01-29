@@ -700,6 +700,83 @@ str 给终端用户看,repr 则是给开发者看
 一切对象都有str和repr
 
 
+## 关于with语句(about_with_statements)
+
+1. test_counting_lines
+2. test_finding_lines
+
+### 用传统方法,计算行和发现行
+
+```
+
+       try:
+            file = open(file_name)
+            try:
+                return len(file.readlines())
+            finally:
+                file.close()
+        except IOError:
+            # should never happen
+            self.fail()
+
+
+```
+
+
+3. test_counting_lines2
+4. test_finding_lines2
+
+使用上下文管理器
+
+
+```
+
+    class FileContextManager():
+
+        def __init__(self, file_name):
+            self._file_name = file_name
+            self._file = None
+
+        def __enter__(self):
+            self._file = open(self._file_name)
+            return self._file
+
+        def __exit__(self, cls, value, tb):
+            self._file.close()
+
+    # Now we write:
+
+    def count_lines2(self, file_name):
+        with self.FileContextManager(file_name) as file:
+            return len(file.readlines())
+
+
+```
+
+
+
+
+5. test_finding_lines3
+
+使用自定义的管理器
+
+```
+
+   def count_lines3(self, file_name):
+        with open(file_name) as file:
+            return len(file.readlines())
+
+```
+
+### 总结
+Context managers are a way of allocating and releasing some sort of resource exactly where you need it.
+上下文管理器是方便管理资源的开与关工具.
+
+
+### 参考
+
+[introduction-to-context-managers](http://eigenhombre.com/2013/04/20/introduction-to-context-managers/)
+
 
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
