@@ -1072,6 +1072,42 @@ issubclass使用,以及继承类的关系.
  说明重载的类的方法要想被调用,就要主动调用!
 
 
+## 关于多重继承(about_multiple_inheritance)
+
+```
+
+Hierarchy:
+               Animal(方法:can_climb_walls,here)
+                  /              \
+Pig(方法:name,speak,color,here)   Spider(方法:can_climb_walls,legs,color,here)  Nameable(set_name, here)
+
+                  \             /                                            /
+                  Spiderpig(方法:speak,here ) -------------------------------|
+
+
+
+```
+
++ test_base_class_methods_are_also_available_in_the_object
++ test_base_class_methods_are_also_available_in_the_object
++ test_left_hand_side_inheritance_tends_to_be_higher_priority
++ test_super_class_methods_are_higher_priority_than_super_super_classer
++ test_we_can_inspect_the_method_resolution_order
++ test_confirm_the_mro_controls_the_calling_order
+
+总结:
+多种继承,重要术语MRO = Method Resolution Order
+方法查找,左边优先于右边!
+
+mro = type(self.Spiderpig()).mro()
+self.assertEqual('Spiderpig', mro[0].__name__)
+self.assertEqual('Pig', mro[1].__name__)
+self.assertEqual('Spider', mro[2].__name__)
+self.assertEqual('Animal', mro[3].__name__)
+self.assertEqual('Nameable', mro[4].__name__)
+self.assertEqual('object', mro[5].__name__)
+
+
 
 
 
