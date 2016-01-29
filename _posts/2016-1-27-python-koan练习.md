@@ -1108,6 +1108,53 @@ self.assertEqual('Nameable', mro[4].__name__)
 self.assertEqual('object', mro[5].__name__)
 
 
+*Sparse is better than dense.*
+
+
+## 关于作用域(about_scope)
+
++ test_dog_is_not_available_in_the_current_scope
++ test_you_can_reference_nested_classes_using_the_scope_operator
+
+说明各模块属性,方法,不会相互污染!
+
++ test_base_bones_class_names_do_not_assume_the_current_scope
++ test_nested_string_is_not_the_same_as_the_system_string
++ test_str_without_self_prefix_stays_in_the_global_scope
+
+结论:
+各模块属性不相互影响
+
++ test_incrementing_with_local_counter
++ test_incrementing_with_global_counter
+
+使用global能修改全局变量,并能使用变量指向全局.
+
++ test_getting_something_locally
++ test_getting_something_nonlocally
+
+nonlocal 关健字的使用
+
+
+```
+
+
+    def nonlocal_access(self):
+        stuff = 'eels'
+
+        def from_the_boosh():
+            nonlocal stuff
+            return stuff
+        return from_the_boosh()
+
+
+```
+
+
++ test_global_attributes_can_be_created_in_the_middle_of_a_class
+
+
+说明全局变量能创造!
 
 
 
