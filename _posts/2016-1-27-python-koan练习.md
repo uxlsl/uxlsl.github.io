@@ -1243,5 +1243,42 @@ __module__ 是写绝对路径,这样信息量大一点!
 说明了实体的独立性!
 
 
+## 关于属性访问(about_attribute_access)
+
+
+```
+
+    class CatchAllAttributeReads:
+
+        def __getattribute__(self, attr_name):
+            return "Someone called '" + attr_name + "' and it could not be found"
+
+
+    class MinimalCatcher:
+
+        class DuffObject:
+            pass
+
+        def __init__(self):
+            self.no_of_getattr_calls = 0
+
+        def __getattr__(self, attr_name):
+            self.no_of_getattr_calls += 1
+            return self.DuffObject
+
+        def my_method(self):
+            pass
+
+ # Using 'object' directly because using super() here will also
+ # trigger a __getattribute__() call.
+
+```
+主要是讲了__getattribute__ 的使用,访问通过这个方法,getattr
+
+**getattribute** ->没有原属性? 是-> **getattr**
+
+
+
+
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
