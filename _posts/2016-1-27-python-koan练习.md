@@ -923,5 +923,35 @@ welcome lsl
 __self__, __func__, __get__, __set__
 
 
+
+## 关于函数装饰器(about_decorating_with_functions)
+
+
+```
+
+    def addcowbell(fn):
+        fn.wow_factor = 'COWBELL BABY!'
+        return fn
+
+    @addcowbell
+    def mediocre_song(self):
+        return "o/~ We all live in a broken submarine o/~"
+
+    def xmltag(fn):
+        def func(*args):
+            return '<' + fn(*args) + '/>'
+        return func
+
+    @xmltag
+    def render_tag(self, name):
+        return name
+
+
+```
+
+### 总结
+装饰器作用是装饰,不能改变函数内部逻辑,也可以能,对参数进行修改!
+
+
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
