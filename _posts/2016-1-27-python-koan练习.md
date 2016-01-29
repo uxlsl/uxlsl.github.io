@@ -842,6 +842,7 @@ class DiceSet:
 ```
 
 
+*Beautiful is better than ugly.*
 
 
 
