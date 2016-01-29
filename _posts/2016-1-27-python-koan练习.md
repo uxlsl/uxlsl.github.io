@@ -1183,6 +1183,27 @@ __ALL__的作用
 
 
 
+## 关于包(about_packages)
+
++ test_subfolders_can_form_part_of_a_module_package
++ test_subfolders_become_modules_if_they_have_an_init_module
+
+说明:
+子模块能够被导入,包条件是要有一个__init__.py
+
++ test_use_absolute_imports_to_import_upper_level_modules
+
+说明:
+能通过绝对路径导入模块
+
++ test_import_a_module_in_a_subfolder_folder_using_an_absolute_path
+
+说明:
+self.assertEqual('koans.a_package_folder.a_module', Duck.__module__)
+
+__module__ 是写绝对路径,这样信息量大一点!
+
+
 
 
 ## 参考
