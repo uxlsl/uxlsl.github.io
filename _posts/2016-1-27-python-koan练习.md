@@ -1318,6 +1318,77 @@ __module__ 是写绝对路径,这样信息量大一点!
 
 
 
+## 关于对象代理(about_proxy_object_project)
+
+
+
+```
+
+
+class Proxy:
+
+    def __init__(self, target_object):
+        # WRITE CODE HERE
+        self._record = {}
+        # initialize '_obj' attribute last. Trust me on this!
+        self._obj = target_object
+        self._messages = []
+    # WRITE CODE HERE
+
+    def upper(self):
+        return self._obj.upper()
+
+    def split(self):
+        return self._obj.split()
+
+    def power(self):
+        return self._obj.power()
+
+    def is_on(self):
+        return self._obj.is_on()
+
+    def messages(self):
+        return self._messages
+
+    def was_called(self, s):
+        if s == 'power':
+            return self._obj.power
+        elif s == 'channel':
+            return self._obj.channel
+
+    def number_of_times_called(self, s):
+        return self._record.get(s, 0)
+
+    def __setattr__(self, name, value):
+        if name != '_record':
+            self._record[name] = self._record.get(name, 0) + 1
+        if name != '_messages' and name != '_obj' and name != '_record':
+            self._messages.append(name)
+        return object.__setattr__(self, name, value)
+
+        return object.__setattr__(self, name, value)
+
+    def __getattribute__(self, name):
+        if name == '_record':
+            return object.__getattribute__(self, '_record')
+        elif name == '_messages':
+            return object.__getattribute__(self, '_messages')
+        else:
+            record = object.__getattribute__(self, '_record')
+            record[name] = record.get(name, 0) + 1
+            if name != '_obj' and name != 'messages':
+                messages = object.__getattribute__(self, '_messages')
+                messages.append(name)
+            return object.__getattribute__(self, name)
+
+
+
+```
+
++ test_proxy_counts_method_calls
+
+这个有难度,搞了好久!
+
 
 
 ## 参考
