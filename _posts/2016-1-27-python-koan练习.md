@@ -1157,6 +1157,33 @@ nonlocal 关健字的使用
 说明全局变量能创造!
 
 
+*Unless explicitly silenced.*
+*不要包容所有错误,除非你确定需要这样做*
+
+## 关于模块(about_modules)
+
++ test_importing_other_python_scripts_as_modules
++ test_importing_attributes_from_classes_using_from_keyword
+
+相对导入的使用
+from . import local_module
+from .local_module import Dock
+
++ test_we_can_import_multiple_items_at_once
+
+我们能同时导入多个
+
++ test_importing_all_module_attributes_at_once
+
+能一次导入模块所有属性
+
++ test_a_module_can_choose_which_attributes_are_available_to_wildcards
+
+__ALL__的作用
+
+
+
+
 
 ## 参考
 python-3.4.3-docs-html/library/string.html#formatspec
