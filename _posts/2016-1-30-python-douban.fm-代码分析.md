@@ -284,7 +284,7 @@ if __name__ == '__main__':
 ```
 
 
-### check.py 代码分析
+## check.py 代码分析
 
 主要包含
 is_latest
@@ -309,7 +309,8 @@ subprocess.check_output
 ```
 
 
-### getch.py 文件分析
+## getch.py 代码分析
+
 好像作者是为了让输入不显示,所以用这个文件的
 看文件头
 
@@ -329,6 +330,27 @@ In [1]: from doubanfm.getch import getch
 
 In [2]: getch()
 Out[2]: 'h'
+
+
+```
+
+
+## douban.py 代码分析
+
+主要看看门狗程序的切换页面
+
+
+
+```
+
+        self.view_control_map['main'].run(self.switch_queue)
+
+        while not self.quit_quit:
+            key = self.switch_queue.get()
+            if key == 'quit_quit':
+                self.quit_quit = True
+            else:
+                self.view_control_map[key].run(self.switch_queue)
 
 
 ```
