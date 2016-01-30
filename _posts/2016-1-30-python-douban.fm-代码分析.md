@@ -282,3 +282,28 @@ if __name__ == '__main__':
 
 
 ```
+
+
+### check.py 代码分析
+
+主要包含
+is_latest
+update_package
+is_mplayer
+
+学习点:
+pip包的使用
+
+
+```
+
+import pip
+
+pip.main(['install', package_name, '--upgrade'])
+
+# 检查 mplayer,是不是存在这个程序!
+
+subprocess.check_output
+
+
+```
