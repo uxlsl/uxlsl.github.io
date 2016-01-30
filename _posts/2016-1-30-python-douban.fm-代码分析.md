@@ -195,7 +195,7 @@ mplayer.start_queue()
 
 ### 例子一个只播放指定电台的脚本
 
-./demo/code/2016-1-30/douban.fm
+./demo/code/2016-1-30/douban.fm/playonefm.py
 
 ```
 
@@ -229,6 +229,48 @@ def main():
     queue = PlayerQueue(douban)
     mplayer = player.MPlayer()
     mplayer.start_queue(queue)
+
+    while True:
+        if not mplayer.is_alive:
+            break
+        time.sleep(5)
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+
+## doubanfm/model.py 代码分析
+
+主要有三个类.
+Playlist,History,Channel
+
+Playlist类主要封装了Doubanfm类,并在其基础上作了一些扩展,
+比如在提前把播放列表拿下来(_watchdog).
+
+例子:
+使用 Playlist类对前面的例子作了改进,但不知如何打印当前歌曲!
+
+./demo/code/2016-1-30/douban.fm/playonefm.py
+
+```
+
+# -*- coding: utf-8 -*-
+import time
+from doubanfm import player
+from doubanfm.model import Playlist
+
+
+def main():
+    import sys
+    # 4 是粤语
+    channel = int(sys.argv[1])
+    playlist = Playlist()
+    playlist.set_channel(channel)
+    mplayer = player.MPlayer()
+    mplayer.start_queue(playlist)
 
     while True:
         if not mplayer.is_alive:
