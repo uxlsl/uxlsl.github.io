@@ -307,3 +307,28 @@ subprocess.check_output
 
 
 ```
+
+
+### getch.py 文件分析
+好像作者是为了让输入不显示,所以用这个文件的
+看文件头
+
+"""
+Copyright (c) 2006-2015 sqlmap developers (http://sqlmap.org/)
+See the file 'doc/COPYING' for copying permission
+"""
+
+可以看出作者门也看了不少代码.
+
+
+简单说明如何使用这个包,之于代码为什么这个实现,我先不进行研究.
+
+```
+
+In [1]: from doubanfm.getch import getch
+
+In [2]: getch()
+Out[2]: 'h'
+
+
+```
