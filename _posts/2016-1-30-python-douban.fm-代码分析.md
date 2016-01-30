@@ -102,6 +102,7 @@ print(ret)
 
 
 # --结果--
+$ python test_login.py
 
 ➔ Email: Pythonista
 ➔ Password:
