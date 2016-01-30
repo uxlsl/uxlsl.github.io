@@ -163,3 +163,80 @@ json.dump(ret, open('playlist.json', 'w'))
 
 
 ```
+
+
+## player.py 代码分析
+
+主要有二个类
+继承关系
+
+Player
+|
+Mplayer
+
+### 原理
+运行播放器,并且使用看门狗监控播放器的运行状态.
+
+不明白的
+queue应该从中get, 但使用get_playingsong和get_song
+
+例子
+
+```
+
+queue = XXX
+
+mplayer = MPlayer()
+mplayer.start_queue()
+# 之后就会启动一个看门狗线程,监控mplayer
+# 一旦终止,就会从队列从取出新的播放曲目给mplayer启动.
+
+```
+
+### 例子一个只播放指定电台的脚本
+
+./demo/code/2016-1-30/douban.fm
+
+```
+
+# -*- coding: utf-8 -*-
+import time
+from doubanfm import player
+from doubanfm.API import api
+
+
+class PlayerQueue:
+
+    def __init__(self, douban):
+        self.douban = douban
+        self.current_song = douban.get_first_song()
+
+    def get_playingsong(self):
+        return self.current_song
+
+    def get_song(self):
+        self.current_song = self.douban.get_song(self.current_song['sid'])
+        print(self.current_song['title'])
+        return self.current_song
+
+
+def main():
+    import sys
+    # 4 是粤语
+    channel = int(sys.argv[1])
+    douban = api.Doubanfm()
+    douban.set_channel(channel)
+    queue = PlayerQueue(douban)
+    mplayer = player.MPlayer()
+    mplayer.start_queue(queue)
+
+    while True:
+        if not mplayer.is_alive:
+            break
+        time.sleep(5)
+
+if __name__ == '__main__':
+    main()
+
+
+```
