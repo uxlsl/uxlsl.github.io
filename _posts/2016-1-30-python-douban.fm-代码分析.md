@@ -343,6 +343,34 @@ Out[2]: 'h'
 
 ```
 
+class Router(object):
+    """
+    集中管理view之间的切换
+    """
+
+    def __init__(self):
+        self.player = MPlayer()
+        self.data = data.Data()
+        self.quit_quit = False
+
+        self.switch_queue = Queue.Queue(0)
+
+        self.view_control_map = {
+            'main': MainController(self.player, self.data),
+            'lrc': LrcController(self.player, self.data),
+            'help': HelpController(self.player, self.data),
+            'manager': ManagerController(self.player, self.data),
+            'quit': QuitController(self.player, self.data)
+        }
+
+        # 切换线程
+        Thread(target=self._watchdog_switch).start()
+
+    def _watchdog_switch(self):
+        """
+        切换页面线程
+        """
+        # init
         self.view_control_map['main'].run(self.switch_queue)
 
         while not self.quit_quit:
@@ -351,6 +379,15 @@ Out[2]: 'h'
                 self.quit_quit = True
             else:
                 self.view_control_map[key].run(self.switch_queue)
+
+        # 退出保存信息
+        self.quit()
+        os._exit(0)
+
+    def quit(self):
+        # 退出保存信息
+        self.data.save()
+        subprocess.call('echo -e "\033[?25h";clear', shell=True)
 
 
 ```
