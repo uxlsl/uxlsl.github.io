@@ -35,3 +35,8 @@ flask_login.login_user(user)
 ## 工作流
 
 @login_reqire -> login_manager -> login界面 -> login_user -> ... -> logout_user
+
+
+## 参考
+
+[flask-login](http://flask-login.readthedocs.org/en/latest/)
