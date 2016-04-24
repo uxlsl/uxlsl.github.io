@@ -9,7 +9,8 @@ import pprint
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0'}
 url = 'http://www.xicidaili.com/nn/{num}'
-ip_test_url = "http://ip.chinaz.com/getip.aspx"
+# ip_test_url = "http://ip.chinaz.com/getip.aspx"
+ip_test_url = "http://httpbin.org/ip"
 
 
 def get_ips(url, dt):
