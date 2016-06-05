@@ -62,6 +62,6 @@ Genre.objects.create(name="Pop Rock", parent=rock)
 
 ## 参考
 
-[](https://github.com/django-mptt/django-mptt)
-[](http://django-mptt.github.io/django-mptt/tutorial.html#getting-started)
+[django-mptt](https://github.com/django-mptt/django-mptt)
+[getting-started](http://django-mptt.github.io/django-mptt/tutorial.html#getting-started)
 
