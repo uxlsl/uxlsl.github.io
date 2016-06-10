@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^foo/genre/jstree', "foo.views.genre_jstree_v"),
+    url(r'^foo/', "foo.views.index"),
 ]
