@@ -75,6 +75,30 @@ A 0.333333333333
 B 0.0
 C 0.666666666667
 
+## 豆豆问题
+
+列举所有情况
+A 袋子1， 1994，袋子2， 1996
+B 袋子1， 1994，袋子2， 1996
+
+```
+
+suite = M_and_M('AB')
+
+```
+
+计算似然度， 先豆后豆
+
+```
+
+    suite.Update(('bag1', 'yellow'))
+    suite.Update(('bag2', 'green'))
+
+```
+
+A 0.740740740741
+B 0.259259259259
+
 
 ## 参考
 [thinkbayes](http://greenteapress.com/wp/think-bayes/)
