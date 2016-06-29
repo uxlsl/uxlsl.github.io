@@ -32,3 +32,49 @@ print pmf.Prob('Bowl 1')
 ```
 
 就这样能理确否？
+
+## 蒙帝问题
+问题大概是这样的有三对门，将一台车放在门后，你选择一个门称为A，
+蒙帝就会打开其他一个门，然后问你是否重新选择？
+解：
+车能放在任何一对门，可能性一样
+
+因此初始化就是这样
+
+```
+
+        Pmf.__init__(self)
+        for hypo in hypos:
+            self.Set(hypo, 1)
+        self.Normalize()
+
+
+```
+
+计算likelihood
+如果车在A, B, C,哪么概率1/2,0,1
+
+车在A后， B,C都能打开，
+车在B后, B不可能打开， 概率为0, 只能打开C
+车在C后, B打开， 概率为1, 只能打开B
+
+```
+
+        if hypo == data:
+            return 0
+        elif hypo == 'A':
+            return 0.5
+        else:
+            return 1
+
+
+```
+
+结果
+A 0.333333333333
+B 0.0
+C 0.666666666667
+
+
+## 参考
+[thinkbayes](http://greenteapress.com/wp/think-bayes/)
