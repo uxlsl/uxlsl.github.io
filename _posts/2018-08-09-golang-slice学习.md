@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: golang slice 学习
 category: 学习
 keywords: 学习,2016
 ---
