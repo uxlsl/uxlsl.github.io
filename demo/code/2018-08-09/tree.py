@@ -15,5 +15,6 @@ class Node(object):
             return False
         return (self.left.IsSame(node.left)
                 if self.left is not None else True) \
-            and (self.right.IsSame(node.right)
-                 if self.right is not None else True)
+               and \
+               (self.right.IsSame(node.right)
+                if self.right is not None else True)
