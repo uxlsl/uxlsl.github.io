@@ -7,11 +7,9 @@ class Node(object):
     def IsSame(self, node):
         if node is None or self.val != node.val:
             return False
-        if (self.left is None and node.left is not None) \
-                or (self.left is not None and node.left is None):
+        if (self.left is None and node.left is not None):
             return False
-        if (self.right is None and node.right is not None) \
-                or (self.right is not None and node.right is None):
+        if (self.right is None and node.right is not None):
             return False
         return (self.left.IsSame(node.left)
                 if self.left is not None else True) \
