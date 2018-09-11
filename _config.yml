@@ -20,7 +20,7 @@ url: http://uxlsl.org
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
-avatar:  http://7xnnj6.com1.z0.glb.clouddn.com/sandy.jpg
+avatar:  https://raw.githubusercontent.com/uxlsl/uxlsl.github.io/master/assets/img/avatar.jpeg
 favicon: http://7xnnj6.com1.z0.glb.clouddn.com/thumb-sandy.jpg
 
 # google analytics 设置
