@@ -1,6 +1,6 @@
 ---
 layout: post
-title:使用Python的mpi4py模块
+title: 使用Python的mpi4py模块
 category: 学习
 keywords: 学习,2018
 ---
