@@ -80,3 +80,4 @@ client.index(
 ## 问题
 
 1. depends_on的作用
+控制启动顺序
