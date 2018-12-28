@@ -66,3 +66,22 @@ for k,v := range m {
 
 
 ```
+
+## 中级
+### 错误处理
+golang 倾向使用一个独立、明确的返回值来传递错误信息。
+也就是类似c语言!
+errors.New
+
+import "errors"
+
+
+func f1() (int, error) {
+	return 1, errors.New("hello")
+}
+func main(){
+	v, e := f1()
+	if e != nil {
+		fmt.Println(v)
+	}
+}
