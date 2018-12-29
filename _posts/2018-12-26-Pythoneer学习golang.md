@@ -71,7 +71,10 @@ for k,v := range m {
 ### 错误处理
 golang 倾向使用一个独立、明确的返回值来传递错误信息。
 也就是类似c语言!
+
 errors.New
+
+```
 
 import "errors"
 
@@ -85,3 +88,22 @@ func main(){
 		fmt.Println(v)
 	}
 }
+
+```
+
+
+## 通道
+
+在python中相当于队列，可以使用包(比如queue,threading safe)实现
+golang 这个内置到语言上实现
+
+定义通道(考虑是否使用缓存)
+
+messages = make(chan string)
+
+放
+messages <- "buffered"
+取
+msg <- messages
+
+
