@@ -110,3 +110,4 @@ msg <- messages
 通道有趣的事
 + 使用通道做定时器
 + 使用通道做打点器
++ close chan for range chan
