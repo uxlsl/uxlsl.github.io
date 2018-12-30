@@ -111,3 +111,6 @@ msg <- messages
 + 使用通道做定时器
 + 使用通道做打点器
 + close chan for range chan
+
+attend 
++ atomic in go
