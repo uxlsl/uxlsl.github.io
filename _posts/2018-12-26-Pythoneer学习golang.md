@@ -115,3 +115,8 @@ msg <- messages
 attend 
 + atomic in go
 + Mutex 
+
+
+## defer 
+defer 相当于python with 的使用,不过with with ,golang 实现要使用func func defer等
+
