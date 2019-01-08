@@ -120,3 +120,6 @@ attend
 ## defer 
 defer 相当于python with 的使用,不过with with ,golang 实现要使用func func defer等
 
+## 变量作用域
+每个括号都有作用域
+:=  初始化运算符
