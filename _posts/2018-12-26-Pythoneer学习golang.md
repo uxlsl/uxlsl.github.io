@@ -67,6 +67,20 @@ for k,v := range m {
 
 ```
 
+```
+
+for {
+}
+
+```
+select  与 chan 与 default
+
+```
+
+```
+
+break goto 的降低版
+
 ## 中级
 ### 错误处理
 golang 倾向使用一个独立、明确的返回值来传递错误信息。
@@ -110,11 +124,20 @@ msg <- messages
 通道有趣的事
 + 使用通道做定时器
 + 使用通道做打点器
++ 使用通道进行同步
 + close chan for range chan
 
 attend 
 + atomic in go
 + Mutex 
+
+检查通道是否成功获取数据
+
+```
+
+if elem, ok := <-dataChan; ok {
+
+```
 
 
 ## defer 
