@@ -205,3 +205,11 @@ golang 通过名字的首字母大小写决定，大写为公有，小写为私�
 ## 相关名称
 
 + 并发字典, 可参考https://github.com/gopcp/example.v2的相关内容.
+
+
+## 工具使用
+
+### goland 编译并运行注意的问题
+运行不成功，定义缺失,一般来说是运行类型与GOPATH设置不当所致,可以这样判断, 
+go run main.go 定缺失,尝试go build ,然后再run,如果成功，就要在goland进行相应该设置run kind Directory
+
