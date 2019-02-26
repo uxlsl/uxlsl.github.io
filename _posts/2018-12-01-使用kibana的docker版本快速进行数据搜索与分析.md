@@ -81,3 +81,6 @@ client.index(
 
 1. depends_on的作用
 控制启动顺序
+
+2. data 的权限问题
+data如果为root,要改为其他用户
